@@ -207,3 +207,119 @@
 // }
 
 // console.log(fizzBuzz(25));
+
+
+//Функція getOrderQuantity(order) приймає один параметр order - масив рядків, які описують продукти в замовленні клієнта. Доповни код функції таким чином, щоб вона повертала число, що дорівнює кількості елементів масиву.
+// function getOrderQuantity(order) {
+//   return order.length;
+// }
+// console.log(getOrderQuantity(["apple", "banana"]));
+
+
+// Функція getLastElementMeta(array) приймає один параметр array - масив довільних значень. Доповни код функції таким чином, щоб вона повертала новий масив з двох елементів:
+
+// перший елемент - це індекс останнього елементу у масиві array
+// другий елемент - це значення останнього елементу у масиві array
+// function getLastElementMeta(array) {
+//     const lengthElement = array.length - 1;
+//     const lastElement = array[lengthElement];
+//     return [lastElement, lengthElement];
+// }
+// console.log(getLastElementMeta(["apple", "peach", "pear", "banana"]));
+
+//Функція getExtremeElements(array) приймає один параметр array - масив елементів довільної довжини. Доповни код функції таким чином, щоб вона повертала масив з двох елементів - першого і останнього елементів параметра array.
+
+// function getExtremeElements(array) {
+//   const firstElement = array[0];
+//   const lastElement = array[array.length - 1];
+//   return [firstElement, lastElement];
+// }
+// console.log(getExtremeElements(["Earth", "Mars", "Venus"]));
+// console.log(getExtremeElements([1, 2, 3, 4, 5]));
+
+// Сервісу гравірування прикрас потрібна функція, яка б автоматично рахувала ціну гравірування, залежно від кількості слів і ціни за слово.
+
+// Оголошена функція calculateEngravingPrice(message, pricePerWord). Ця функція приймає першим параметром рядок, що складається зі слів, розділених лише пробілами (параметр message) та другим параметром - число, що містить ціну гравірування за одне слово (параметр pricePerWord).
+
+// Доповни тіло функції так, щоб вона повертала загальну вартість гравірування усіх слів в рядку.
+
+// function calculateEngravingPrice(message, pricePerWord) {
+//   const words = message.split(" ");
+//   const totalPrice = words.length * pricePerWord;
+//   return totalPrice;
+// }
+// console.log(calculateEngravingPrice("JavaScript is in my blood", 10));
+
+// Функція getSlice(array, value) приймає два параметра:
+
+// array - масив довільних елементів
+// value - значення елемента масиву для пошуку
+// Доповни код функції getSlice(array, value) так, щоб вона виконувала пошук значення value у масиві array і повертала:
+
+// порожній масив, якщо в array немає елемента зі значенням value
+// підмасив, що починається з початку array і до елемента зі значенням value включно, якщо такий елемент є в array
+
+
+// function getSlice(array, value) {
+//   const index = array.indexOf(value);
+//   if (index !== -1) {
+//     return array.slice(0, index + 1);
+//   } else {
+//     return [];
+//   }
+// }
+// console.log(getSlice(["Mango", "Poly", "Ajax"], "Poly"));
+// console.log(getSlice(["Mango", "Poly", "Ajax"], "Mango"));
+// console.log(getSlice(["Mango", "Poly", "Ajax"], "Ajax"));
+
+// function createArrayOfNumbers(min, max) {
+//   const allNumbers = [];
+//   for (let i = min; i <= max; i++) {
+//     allNumbers.push(i);
+//     }
+//     return allNumbers;
+// }
+// console.log(createArrayOfNumbers(1, 3));
+
+// Функція calculateTotalPrice(order) приймає один параметр order - масив чисел. Доповни функцію так, щоб вона повертала загальну суму елементів з масиву order.
+
+// function calculateTotalPrice(order) {
+//   let sum = 0;
+//   for (let i = 0; i < order.length; i++) {
+//     sum += order[i];
+//   }
+//   return sum;
+// }
+
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+
+// Функція createArrayOfNumbers(min, max) приймає два параметра:
+
+// min - ціле число, з якого починаються обчислення
+// max - ціле число, до якого включно триватимуть обчислення
+// Доповни код функції createArrayOfNumbers(min, max) таким чином, щоб вона повертала масив усіх цілих чисел від значення min до max включно.
+
+// function createArrayOfNumbers(min, max) {
+//   const allNumbers = [];
+//   for (let i = min; i <= max; i++) {
+//     allNumbers.push(i);
+//   }
+//   return allNumbers;
+// }
+
+// console.log(createArrayOfNumbers(14, 17));
+
+// Функція getEvenNumbers(start, end) має два параметри start та end, які є цілими числами. Доповни код функції так, щоб вона повертала масив усіх парних чисел від start до end. Якщо жодного парного числа немає, то масив має бути пустим. Парним вважається число, яке ділиться на 2 без остачі (10 % 2 === 0). Використовуй цикл for.
+
+// function getEvenNumbers(start, end) {
+//   const doublesNumber = [];
+//   for (let i = start; i <= end; i++) {
+//     if (i % 2 === 0) {
+//       doublesNumber.push(i);
+//     }
+//   }
+//   return doublesNumber;
+// }
+
+// console.log(getEvenNumbers(8, 8));
+// console.log(getEvenNumbers(7, 7));
