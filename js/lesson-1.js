@@ -9,8 +9,8 @@
 // Запропонуйте користувачу ввести число за допомогою prompt().
 // Збережіть введене значення у змінну number.
 // Перевірте, чи дорівнює змінна number числу 10:
-//    Якщо так – виведіть повідомлення 'Вірно' у alert().
-//    Якщо ні – виведіть 'Невірно'.
+//    Якщо так - виведіть повідомлення 'Вірно' у alert().
+//    Якщо ні - виведіть 'Невірно'.
 
 // Підказка: prompt завжди повертає рядок (String), тому перед перевіркою
 // перетворіть значення на число за допомогою Number().
@@ -323,3 +323,83 @@
 
 // console.log(getEvenNumbers(8, 8));
 // console.log(getEvenNumbers(7, 7));
+
+
+// Функція checkStorage(storage, item) приймає два параметри:
+
+// storage - масив рядків, що описує доступні товари на складі
+// item - рядок з назвою товара, наявність якого потрібно перевірити
+// Доповни код функції таким чином, щоб вона перевіряла, чи присутній такий товар в масиві storage і повертала:
+
+// рядок "<item> is available to order!", де item - це назва товара, якщо товар було знайдено
+// рядок "Sorry! We are out of stock!", якщо такого товара немає в масиві
+// Зроби так, щоб пошук за ім'ям товару був незалежний від регістру, тобто наприклад "plum" і "pLuM" мають бути знайдені у масиві ["apple", "plum", "pear"].
+
+// function checkStorage(storage, item) {
+//   if (storage.includes(item.toLowerCase())) {
+//     return `${item.toLowerCase()} is available to order!`;
+//   } else {
+//     return "Sorry! We are out of stock!";
+//   }
+// }
+
+// console.log(checkStorage(["apple", "plum", "pear"], "pLum"));
+// console.log(checkStorage(["apple", "plum", "pear"], "pEAr"));
+
+// function getCommonElements(array1, array2) {
+//   const array3 = [];
+//   for (let i = 0; i < array1.length; i++) {
+//     if (array2.includes(array1[i])) {
+//       array3.push(array1[i]);
+//     }
+//   }
+//   return array3;
+// }
+
+// console.log(getCommonElements([1, 2, 3], [2, 4]));
+// console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]));
+// console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]));
+
+
+// function calculateTotalPrice(order) {
+//   let totalPrice = 0;
+//   for (const item of order) {
+//     totalPrice += item;
+//   }
+//   return totalPrice;
+// }
+
+
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+
+// function sum(a, b) {
+//   console.log(arguments);
+//   return a + b;
+// }
+
+// sum(2, 5);
+
+// function multiply() {
+//   let total = 1;
+
+//   for (const arg of arguments) {
+//     total *= arg;
+//   }
+
+//   return total;
+// }
+
+// console.log(multiply(1, 2, 3)); //  6
+// console.log(multiply(1, 2, 3, 4)); //  24
+// console.log(multiply(1, 2, 3, 4, 5)); //  120
+
+
+// function createReversedArray() {
+//   let array1 = [];
+//   for (const item of arguments) {
+//     toReversed(array1);
+//   }
+//   return array1;
+// }
+
+// console.log(createReversedArray(12, 85, 37, 4));
