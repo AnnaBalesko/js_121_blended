@@ -231,10 +231,521 @@
 //         if (fruit.name === fruitName) {
 //             total += fruit.price * fruit.quantity;
 //         }
-//     } 
+//     }
 //     return total;
 // }
 // console.log(calcTotalPrice(fruits, "Банан"));
+
+// function sum(a, b) {
+//     return a + b;
+// }
+// console.log(sum(4, 5));
+
+// function square(x) {
+//     return x**2;
+// }
+// console.log(square(5));
+
+// function isEven(n) {
+//     const number = n % 2 === 0;
+//     return number;
+// }
+// console.log(isEven(2));
+
+// function greet(name) {
+//     return `Hello ${name}!`;
+// };
+// console.log(greet("Alice"));
+
+// function max(a, b) {
+//     return Math.max(a, b);
+// }
+// console.log(max(5, 46));
+
+
+// function max(a, b) {
+//     if (a > b) return a;
+//     return b;
+// }
+//  console.log(max(8, 67));
+ 
+
+
+// function arr(n) {
+//     for (let i = 0; i < 7; i++){
+//        console.log(i);
+//     }
+//     }
+
+//   console.log(arr(2));
+  
+// function reverseString(str) {
+//     return str.split("").reverse().join("");
+// }
+// console.log(reverseString("hello"));
+  
+// function isPalindrome(str) {
+//     let reverse = str.split("").reverse().join("");
+//     return str === reverse;
+// }
+//   console.log(isPalindrome("level"));
+  
+// function toUpperCaseFirst(str) {
+//     return str[0].toUpperCase() + str.slice(1);
+// }
+// console.log(toUpperCaseFirst("alice"));
+
+// function getRundom(min, max) {
+//     return Math.floor(Math.random() * (max - min + 1) + min);
+// }
+// console.log(getRundom(2, 4));
+
+// const multiply = (a, b) => a * b;
+// console.log(multiply(5,6));
+
+
+// const isPositive = n => n.every(el => el > 0);
+// console.log(isPositive([1, 4, 6, -7]));
+
+// const getLength = str => str.length;
+// console.log(getLength("hello"));
+
+
+// const double = arr => arr.map(value => value * 2);
+// console.log(double([3, 6, 8]));
+
+// const getLast = arr => arr[arr.length - 1];
+// console.log(getLast("hello ther"));
+
+// const getLast = arr => arr.at(-1);
+// console.log(getLast(["Anna", "Alice"]));
+ 
+// const min = (a, b) => Math.min(a, b);
+// console.log(min(4, 89));
+
+// const pow = (base, exp) => Math.pow(base, exp);
+// console.log(pow(3, 2));
+
+// const concatString = (a, b) => a.concat(b);
+// console.log(concatString("Hello ", "world!"));
+
+// const getCharAt = str => str.charAt(0);
+// console.log(getCharAt("Hello"));
+
+// const isAdult = age => age >= 18;
+// console.log(isAdult());
+
+// const array = ["a", "b", "c"];
+// array.forEach((element) => console.log(element)
+// );
+
+// const numbers = [1, 2, 3, 4, 5, 6];
+// numbers.forEach(function (number, index) {
+//     console.log(`Index ${index}, value ${number}`)
+// });
+
+// const doubleNumber = arr => arr.map(number => number * 2);
+// console.log(doubleNumber([2, 3, 6]));
+
+// const getNumber = arr => arr.filter(number => number % 2 === 0);
+// console.log(getNumber([1, 2 ,4, 7, 8, 67, 44]));
+
+// const user = {
+//     username: "Viktor",
+//     showName() {
+//         console.log(this.username);
+        
+//     }
+// }
+// console.log(user.username);
+// user.showName();
+
+// const pizzaPalace = {
+//   pizzas: ["Supercheese", "Smoked", "Four meats"],
+//   checkPizza(pizzaName) {
+//     return this.pizzas.includes(pizzaName);
+//   },
+//   order(pizzaName) {
+//     const isPizzaAvailable = this.checkPizza(pizzaName);
+
+//     if (!isPizzaAvailable) {
+//       return `Sorry, there is no pizza named «${pizzaName}»`;
+//     }
+
+//     return `Order accepted, preparing «${pizzaName}» pizza`;
+//   },
+// };
+
+// console.log(pizzaPalace.order("Four meats"));
+
+// const user = {
+//     username: "Polly",
+//     showThis() {
+//         console.log(this);
+        
+//     }
+// }
+// user.showThis();
+
+// "use strict";
+
+// function showThis() {
+//     console.log("this is showThis: ", this);
+    
+// }
+// const user = {
+//     username: "Poly",
+// };
+// user.showContext = showThis;
+
+// user.showContext();
+// showThis();
+
+// const book = {
+//   updateTitle(newTitle) {
+//     // ...
+//   },
+// };
+
+// const update = book.updateTitle;
+
+// update("Lord Of The Rings");
+
+
+
+
+
+// function sayHello(greeting) {
+//   console.log(`${greeting}, ${this.name}!`);
+// }
+
+// const user = {
+//   name: "Alice",
+// };
+
+// const greet = sayHello.bind(user);
+
+// greet("Hello");
+
+
+// const showThis = () => {
+//   console.log("this in showThis: ", this);
+// };
+
+// showThis(); // this in showThis: window
+
+// const animal = {
+//   legs: 4,
+// };
+
+// const dog = Object.create(animal);
+// dog.name = "Mango";
+
+// console.log(dog); // { name: "Mango", [[Prototype]]: animal }
+
+// const parent = {
+//   name: "Stacey",
+//   surname: "Moore",
+//   age: 54,
+//   heritage: "Irish",
+// };
+
+// const child = Object.create(parent);
+// child.name = "Jason";
+// child.age = 27;
+// console.log(parent.hasOwnProperty("surname"));
+
+
+// class Car {
+//   constructor(brand, model, price) {
+//     this.brand = brand;
+//     this.model = model;
+//     this.price = price;
+//   }
+// }
+
+// class Car {
+//   #price;
+//   static maxPrice = 50000;
+//   constructor (params) {
+//     this.#price = params.price;
+//   }
+//   get price() {
+//     return this.#price;
+//   }
+//   set price(newPrice) {
+//     if (newPrice <= Car.maxPrice) {
+//       this.#price = newPrice;
+//     }
+//   }
+// }
+
+// class Car {
+//   static #maxPrice = 50000;
+//     static checkPrice(price) {
+//         if (price > Car.#maxPrice) {
+//             return "Error! Price exceeds the maximum";
+//         } else {
+//             return "Success! Price is within acceptable limits";
+//         };
+// }
+//   constructor(params) {
+//     this.price = params.price;
+//   }
+// }
+
+// const audi = new Car({ price: 36000 });
+// const bmw = new Car({ price: 64000 });
+
+// class User {
+//   email;
+
+//   constructor(email) {
+//     this.email = email;
+//   }
+
+//   get email() {
+//     return this.email;
+//   }
+
+//   set email(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
+// class Admin extends User {
+//   static role = {
+//     BASIC: "basic",
+//     SUPERUSER: "superuser",
+//   };
+
+//   constructor(params) {
+//     super(params.email);
+//       this.access = params.access;
+//       this.blacklistedEmails = [];
+//   }
+//   blacklist(email){
+//     this.blacklistedEmails.push(email)
+//   }
+//   isBlacklisted(email){
+//     if(this.blacklistedEmails.includes(email)){
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   }
+// }
+
+// const mango = new Admin({
+//   email: "mango@mail.com",
+//   access: Admin.role.SUPERUSER,
+// });
+
+// console.log(mango.email); // "mango@mail.com"
+// console.log(mango.access); // "superuser"
+
+// mango.blacklist("poly@mail.com");
+// console.log(mango.blacklistedEmails); // ["poly@mail.com"]
+// console.log(mango.isBlacklisted("mango@mail.com")); // false
+// console.log(mango.isBlacklisted("poly@mail.com")); // true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
